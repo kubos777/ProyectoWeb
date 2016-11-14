@@ -37,8 +37,24 @@
   </div>
 </nav>
 
-
 <!--CODIGO DE LA PAGINA :V-->
+
+<div class="row">
+            <div class="col s12 offset-l4 m4" off>
+                <div class="card black darken-l" style="border-radius: 5px">
+                    <div class="card-content white-text" style="text-align: center">
+                        <span class="card-title" style=" font-family: 'Lobster', cursive; border-radius: 10px" >Hola, <?php echo $_SESSION['nickname']?></span>
+                        <form action="login.php" method="POST">
+                            <center style="font-family: 'PT Sans', sans-serif"> 
+                                <p>Actualmente estás: </p>
+                                <a href="logout.php">Cerrar sesión</a>
+                            </center>
+                        </form> 
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
 
 <div class="carousel" >
   <a class="carousel-item" href="#"><img src="img/c.png"></a>
@@ -56,7 +72,7 @@
   <div>
     <h2 style="text-align: left; font-family: 'Raleway', sans-serif">Becarios activos actualmente:</h2>
     
-    
+
   </div>
 </div>
 <div class="parallax-container">
