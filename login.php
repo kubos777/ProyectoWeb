@@ -17,8 +17,8 @@
         	session_start();
 			$_SESSION['nickname'] = $data['nickname'];
 			$_SESSION['nombre'] = $data['nombre'];
-            $_SESSION['nombre'] = $data['apellido_p'];
-            $_SESSION['nombre'] = $data['apellido_m'];
+            $_SESSION['apellido_p'] = $data['apellido_p'];
+            $_SESSION['nombre_p'] = $data['apellido_m'];
 			$pdo = Database::connect();
 			header('location: ./index.php');
         	exit();

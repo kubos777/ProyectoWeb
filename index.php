@@ -46,11 +46,30 @@
                         <span class="card-title" style=" font-family: 'Lobster', cursive; border-radius: 10px" >Hola, <?php echo $_SESSION['nickname']?></span>
                         <form action="login.php" method="POST">
                             <center style="font-family: 'PT Sans', sans-serif"> 
-                                <p>Actualmente estás: </p>
-                                <a href="logout.php">Cerrar sesión</a>
+                                <p>Actualmente estás
+                                  <?php 
+                                    include 'db.php'; 
+                                    $pdo = Database::connect();
+                                    $sql = 'SELECT estado FROM Asistencia WHERE nickname=\''.$_SESSION['nickname'].'\'';
+                                    foreach ($pdo->query($sql) as $row) {
+                                      $estado = $row['estado'];
+                                    }
+                                    Database::disconnect();
+                                    echo $estado.'.';
+                                  ?> 
+                                </p>
+                                <a class="btn" href="logout.php">Cerrar sesión</a> 
+                                <!--Estos son botones dinámicos. Después del echo puedes poner HTML.-->
+                                <?php 
+                                  if ($estado == 'inactivo') { 
+                                    echo '<a class="btn" href="cambio-estado.php">Cambiar a estado "activo"</a>'; 
+                                  }
+                                  else{
+                                    echo '<a class="btn" href="cambio-estado.php">Cambiar a estado "inactivo"</a>';
+                                  }
+                                ?>
                             </center>
                         </form> 
-                        
                     </div>
                 </div>
             </div>
@@ -70,8 +89,46 @@
 </div>
 <div class="container" id="info">
   <div>
+<!--Listado de todos los que tengan estado = "activo" en la BD-->
     <h2 style="text-align: left; font-family: 'Raleway', sans-serif">Becarios activos actualmente:</h2>
-    
+      <table>
+
+                    <thead>
+                      <tr>
+                        <th>Apellido</th>
+                        <th>Nombre</th>
+                        <th>Nickname</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <?php
+                        $id = 0;
+                        $pdo = Database::connect();
+                        $nickname = 'SELECT nickname FROM Becario WHERE id=\'$id\'';
+                        foreach ($pdo->query($nickname) as $row1) {
+                          $nick = $row1['nickname'];
+                          $estado = 'SELECT * FROM Asistencia WHERE estado=\'activo\' AND nickname=\'$nick\'';
+                          foreach ($pdo->query($estado) as $row2) {
+                            ?>
+                            <tr>
+                              <td>
+                                <?php echo $row2['apellido'];?>
+                              </td>
+                              <td>
+                                <?php echo $row2['nombre'];?>
+                              </td>   
+                              <td>
+                                <?php echo $row2['nickname'];?>
+                              </td>                    
+                              <?php 
+                              $id+=1; 
+                            } 
+                        } 
+                        Database::disconnect();
+                        ?>
+                      </tr>
+                    </tbody>
+                  </table>
 
   </div>
 </div>
