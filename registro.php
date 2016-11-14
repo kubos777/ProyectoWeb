@@ -51,6 +51,7 @@
 
 					<div class="input-field col s12">
 					<a href="index.php  class="waves-effect waves-light btn style="color: #bbdefb O font-family: 'Raleway', sans-serif">Regresar</a>
+                    <a href="index.php  class="waves-effect waves-light btn style="color: #bbdefb O font-family: 'Raleway', sans-serif">Regresar</a>
 					</div>
 				</form>
 			</div>

@@ -10,7 +10,7 @@
   <link href="https://fonts.googleapis.com/css?family=PT+Sans|Pacifico" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=News+Cycle|PT+Sans|Pacifico" rel="stylesheet">
 </head>
-<body style="background-color: rgba(84, 153, 199, 0.4); overflow-x: hidden">
+<body style="background-color: rgba(123, 115, 135, 0.67); overflow-x: hidden">
   <!--NAV ESTILO MIKEY-->
   <nav>
     <div class="nav-wrapper black   white-text">
@@ -32,14 +32,15 @@
 
 <!--CODIGO DE LA PAGINA :V-->
 
-<h1>Actividad reciente de los becarios.</h1>
-  <p>¿Deseas buscar la actividad reciente de algún becario en específico? Ingresa sus datos:</p>
+<h1 style=" font-family: 'Lobster', cursive; text-align: center;">Actividad reciente de los becarios.</h1>
+  <p style="font-family: 'Raleway', sans-serif; text-align: center;">¿Deseas buscar la actividad reciente de algún becario en específico?</p>
   <!--Si no se encuentran resultados, regresa al mismo lugar-->
   
 <div class="row">
             <div class="col s12 offset-l4 m4" off>
                 <div class="card black darken-l" style="border-radius: 5px">
                     <div class="card-content white-text" style="text-align: center">
+                    <span class="card-title" style=" font-family: 'Raleway', sans-serif; border-radius: 10px" >Ingresa sus datos</span>
   <form action="busqueda.php" method="POST"> 
     <div class="input-field col l10 offset-l1" style="text-align: left">
       <div class="input-field col l10 offset-l1" style="text-align: left">
@@ -60,8 +61,8 @@
             </div>
         </div>
 
-  <h4>A continuación se muestran los últimos 100 registros de actividad de los becarios:</h4>
-<table class="responsive-table centered highlight bordered #9fa8da indigo lighten-3" >
+  <h4 style="font-family: 'Raleway', sans-serif;"">A continuación se muestran los últimos 100 registros de actividad de los becarios:</h4>
+<table class="responsive-table centered highlight bordered #9fa8da indigo lighten-3" style="font-family: 'Raleway', sans-serif;" >
   <thead>
     <tr>
       <th>Nickname</th>

@@ -18,7 +18,7 @@
   <link href="https://fonts.googleapis.com/css?family=PT+Sans|Pacifico" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=News+Cycle|PT+Sans|Pacifico" rel="stylesheet">
 </head>
-<body style="background-color: rgba(84, 153, 199, 0.4); overflow-x: hidden">
+<body style="background-color: rgba(123, 115, 135, 0.67); overflow-x: hidden">
   <!--NAV ESTILO MIKEY-->
   <nav>
     <div class="nav-wrapper black   white-text">
@@ -27,7 +27,6 @@
         <li> 
 
           <div class="input-field col s12">
-          <a href="actividad.php  class="waves-effect waves-light btn style="color: #bbdefb O font-family: 'Raleway', sans-serif">Regresar</a>
           </div>
         </form>
       </div>
@@ -39,8 +38,10 @@
 </nav>
 
 <!--CODIGO DE LA PAGINA :V-->
-<h4>Registro de actividad para <?php echo $_POST['nombre'].' '.$_POST['apellido']?> </h4>
-<table>
+<h4 style="font-family: 'Raleway', sans-serif; text-align: center;">Registro de actividad para <?php echo $_POST['nombre'].' '.$_POST['apellido']?> </h4>
+<br>
+<br>
+<table class="responsive-table centered highlight bordered #01579b light-blue darken-4" style="font-family: 'Raleway', sans-serif;" >
   <thead>
     <tr>
       <th>Estado</th>
@@ -73,6 +74,11 @@
     </tr>
   </tbody>
 </table>
+<center>
+<div>
+<a class="waves-effect waves-light btn #3949ab indigo darken-1" href="actividad.php" style="color: #bbdefb O font-family: 'Raleway', sans-serif;margin: 10px;padding: -10px; text-align: center;">Regresar</a>
+</div>
+</center>
 
 <!--Fin del código de la página-->
 </body>
