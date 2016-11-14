@@ -9,6 +9,7 @@
   <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=PT+Sans|Pacifico" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=News+Cycle|PT+Sans|Pacifico" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body style="background-color: rgba(123, 115, 135, 0.67); overflow-x: hidden">
   <!--NAV ESTILO MIKEY-->

@@ -1,10 +1,10 @@
 <?php
 //limitar acceso de este archivo!!!
 class Database {
-    private static $dbName = 'Asistencia' ;
-    private static $dbHost = 'localhost' ;
-    private static $dbUsername = 'root';
-    private static $dbUserPassword = '';
+    private static $dbName = 'u775336626_asist' ;
+    private static $dbHost = 'mysql.hostinger.mx' ;
+    private static $dbUsername = 'u775336626_kub';
+    private static $dbUserPassword = 'jotacheone9616';
      
     private static $cont  = null;
      

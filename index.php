@@ -16,6 +16,7 @@
   <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=PT+Sans|Pacifico" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=News+Cycle|PT+Sans|Pacifico" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <title>Entrada</title>
 </head>
 <body style="background-color: rgba(84, 153, 199, 0.4)">
@@ -59,6 +60,8 @@
                                   ?> 
                                 </p>
                                 <a class="btn" href="logout.php">Cerrar sesión</a> 
+                                <br>
+                                <br>
                                 <!--Estos son botones dinámicos. Después del echo puedes poner HTML.-->
                                 <?php 
                                   if ($estado == 'inactivo') { 
