@@ -50,8 +50,6 @@
 				<li> 
 
 					<div class="input-field col s12">
-					<a href="index.php  class="waves-effect waves-light btn style="color: #bbdefb O font-family: 'Raleway', sans-serif">Regresar</a>
-                    <a href="index.php  class="waves-effect waves-light btn style="color: #bbdefb O font-family: 'Raleway', sans-serif">Regresar</a>
 					</div>
 				</form>
 			</div>
@@ -82,6 +80,11 @@
                                 <input type="password" style="border-radius: 10px" name="password" id="password"/>
                                 <br>
                                 <input style="text-align: center; background: rgba(136, 148, 240, 0.5); font-family: 'Lobster', cursive; border-radius: 10px" type="submit" value="Registrarse"/>
+<center>
+<div>
+<a class="waves-effect waves-light btn #3949ab indigo darken-1" href="actividad.php" style="color: #bbdefb; font-family: 'Lobster', cursive;margin: 10px;padding: -10px; text-align: center; border-radius: 20px">Regresar</a>
+</div>
+</center>
                             </center>
                         </form> 
                         
