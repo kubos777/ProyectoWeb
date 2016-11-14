@@ -19,7 +19,7 @@
         <li> 
 
           <div class="input-field col s12">
-          <a href="index.php  class="waves-effect waves-light btn style="color: #bbdefb O font-family: 'Raleway', sans-serif">Regresar</a>
+
           </div>
         </form>
       </div>
@@ -34,7 +34,13 @@
 
 <h1>Actividad reciente de los becarios.</h1>
   <p>¿Deseas buscar la actividad reciente de algún becario en específico? Ingresa sus datos:</p>
-  <form> 
+  <!--Si no se encuentran resultados, regresa al mismo lugar-->
+  
+<div class="row">
+            <div class="col s12 offset-l4 m4" off>
+                <div class="card black darken-l" style="border-radius: 5px">
+                    <div class="card-content white-text" style="text-align: center">
+  <form action="busqueda.php" method="POST"> 
     <div class="input-field col l10 offset-l1" style="text-align: left">
       <div class="input-field col l10 offset-l1" style="text-align: left">
         <input id="nickname" type="text" class="validate" name="nickname"><label for="nickname">Nickname</label>
@@ -46,10 +52,16 @@
         <input id="apellido" type="text" class="validate" name="apellido"><label for="apellido">Apellido Paterno</label>
       </div>
     </div>
-    <input style="text-align: center; background: rgba(136, 148, 240, 0.5); font-family: 'Lobster', cursive; border-radius: 10px" type="submit" value="Iniciar sesión"/>
+    <input style="text-align: center; background: rgba(136, 148, 240, 0.5); font-family: 'Lobster', cursive; border-radius: 10px" type="submit" value="Buscar"/>
   </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
   <h4>A continuación se muestran los últimos 100 registros de actividad de los becarios:</h4>
-<table>
+<table class="responsive-table centered highlight bordered #9fa8da indigo lighten-3" >
   <thead>
     <tr>
       <th>Nickname</th>
@@ -63,11 +75,12 @@
     <?php
     require 'db.php';
     $pdo = Database::connect();
+    $i = 0;
     $sql = 'SELECT * FROM Asistencia';
       foreach ($pdo->query($sql) as $row) {
       ?>
       <tr>
-        <td>
+        <td >
           <?php echo $row['nickname'];?>
         </td>
         <td>
@@ -83,13 +96,21 @@
           <?php echo $row['tiempo'];?>
         </td>
         <?php
+        $i+=1;
+        if ($i ==100) {
+          break;
+        }
       }
       Database::disconnect();
       ?>
     </tr>
   </tbody>
 </table>
-
+<center>
+<div>
+<a class="waves-effect waves-light btn #3949ab indigo darken-1" href="index.php" style="color: #bbdefb O font-family: 'Raleway', sans-serif;margin: 10px;padding: -10px; text-align: center;">Regresar</a>
+</div>
+</center>
 <!--Fin del código de la página-->
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>

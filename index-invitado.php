@@ -16,6 +16,7 @@
   <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=PT+Sans|Pacifico" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=News+Cycle|PT+Sans|Pacifico" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <title>Entrada</title>
 </head>
 <body style="background-color: rgba(84, 153, 199, 0.4)">
@@ -28,7 +29,6 @@
           <div class="row">
             <form class="col s12 " action="login.php" method="POST">
               <div class="row"> 
-
             </div>
           </div>
         </div>
@@ -77,11 +77,11 @@
 
 </div>
 <div class="container" id="info">
-  <div>
-    <h2 style="text-align: left; font-family: 'Raleway', sans-serif">Becarios activos actualmente:</h2>
-
-
+<center>
+  <div style="align-content: center; margin: 20px;padding: -10px">
+      <a class="waves-effect waves-light btn-large #ffab40 orange accent-2" href="actividad.php"><i class="material-icons right">assignment_ind</i>Ver actividad reciente</a>
   </div>
+  </center>
 </div>
 <div class="parallax-container">
   <div class="parallax">

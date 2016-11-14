@@ -88,49 +88,11 @@
 
 </div>
 <div class="container" id="info">
-  <div>
-<!--Listado de todos los que tengan estado = "activo" en la BD-->
-    <h2 style="text-align: left; font-family: 'Raleway', sans-serif">Becarios activos actualmente:</h2>
-      <table>
-
-                    <thead>
-                      <tr>
-                        <th>Apellido</th>
-                        <th>Nombre</th>
-                        <th>Nickname</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <?php
-                        $id = 0;
-                        $pdo = Database::connect();
-                        $nickname = 'SELECT nickname FROM Becario WHERE id=\'$id\'';
-                        foreach ($pdo->query($nickname) as $row1) {
-                          $nick = $row1['nickname'];
-                          $estado = 'SELECT * FROM Asistencia WHERE estado=\'activo\' AND nickname=\'$nick\'';
-                          foreach ($pdo->query($estado) as $row2) {
-                            ?>
-                            <tr>
-                              <td>
-                                <?php echo $row2['apellido'];?>
-                              </td>
-                              <td>
-                                <?php echo $row2['nombre'];?>
-                              </td>   
-                              <td>
-                                <?php echo $row2['nickname'];?>
-                              </td>                    
-                              <?php 
-                              $id+=1; 
-                            } 
-                        } 
-                        Database::disconnect();
-                        ?>
-                      </tr>
-                    </tbody>
-                  </table>
-
+<center>
+  <div style="align-content: center; margin: 20px;padding: -10px">
+      <a class="waves-effect waves-light btn-large #ffab40 orange accent-2" href="actividad.php"><i class="material-icons right">assignment_ind</i>Ver actividad reciente</a>
   </div>
+  </center>
 </div>
 <div class="parallax-container">
   <div class="parallax">
